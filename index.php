@@ -103,58 +103,58 @@
                 <div class="col-sm-4 " style="display: inline-block">
                     <center>
                         <img src="img/canoncam.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2">Buy Now</a>
+                        <a href="b.php" class="split2"><p style="color: #1d2124">Buy Now</p></a>
                     </center>
 
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/canoncam2.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2">Buy Now</a>
+                        <a href="b.php" class="split2"><p style="color: #1d2124">Buy Now</p></a>
                     </center>
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/dell1.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" >Buy Now</a>
+                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
                     </center>
                 </div>
                 <br/><br/>.
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/canoncam.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" >Buy Now</a>
+                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
                     </center>
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/canoncam2.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" >Buy Now</a>
+                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
                     </center>
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/dell1.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" >Buy Now</a>
+                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
                     </center>
                 </div>
                 <br/><br/>.
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/canoncam.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" >Buy Now</a>
+                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
                     </center>
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/canoncam2.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" >Buy Now</a>
+                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
                     </center>
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/dell1.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" >Buy Now</a>
+                        <a href="b.php" class="split2"><p style="color: #1d2124">Buy Now</p></a>
                     </center>
                 </div>
             </div>
