@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="x-iso-8859-1">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
     <style>
-        /* Split the screen in half */
+
         .split {
             position: relative;
             width: 100%;
@@ -19,7 +19,6 @@
             z-index: 1010101010
         }
 
-        /* Control the left side */
         .split2 {
             position: relative;
             width: 100%;
@@ -28,10 +27,6 @@
             background-image: linear-gradient(to bottom right, azure, lavenderblush);
             z-index: 1010101010
         }
-
-        /* Control the right side */
-        .right {
-            right: 0;
 
         }
     </style>
@@ -108,52 +103,58 @@
                 <div class="col-sm-4 " style="display: inline-block">
                     <center>
                         <img src="img/canoncam.jfif" width="150px" height="150px">
-                        <p>k</p> <!-- Buy now Button-->
+                        <a href="b.php" class="split2">Buy Now</a>
                     </center>
 
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/canoncam2.jfif" width="150px" height="150px">
-                        <p>k</p>
+                        <a href="b.php" class="split2">Buy Now</a>
                     </center>
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/dell1.jfif" width="150px" height="150px">
-                        <p>k</p>
+                        <a href="b.php" class="split2" >Buy Now</a>
                     </center>
                 </div>
                 <br/><br/>.
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/canoncam.jfif" width="150px" height="150px">
+                        <a href="b.php" class="split2" >Buy Now</a>
                     </center>
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/canoncam2.jfif" width="150px" height="150px">
+                        <a href="b.php" class="split2" >Buy Now</a>
                     </center>
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/dell1.jfif" width="150px" height="150px">
+                        <a href="b.php" class="split2" >Buy Now</a>
                     </center>
                 </div>
                 <br/><br/>.
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/canoncam.jfif" width="150px" height="150px">
+                        <a href="b.php" class="split2" >Buy Now</a>
                     </center>
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/canoncam2.jfif" width="150px" height="150px">
+                        <a href="b.php" class="split2" >Buy Now</a>
                     </center>
                 </div>
                 <div class="col-sm-4" style="display: inline-block">
                     <center>
                         <img src="img/dell1.jfif" width="150px" height="150px">
+                        <a href="b.php" class="split2" >Buy Now</a>
                     </center>
                 </div>
             </div>
