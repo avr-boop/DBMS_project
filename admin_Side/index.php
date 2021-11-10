@@ -68,5 +68,45 @@
         </div>
 
     </div>
+    <div class="container">
+        <h2><b>Login</b></h2>
+        <form action="" method>
+        <table class="table">
+            <tr>
+            <td>
+                <p>
+                  Enter Username:
+                </p>
+            </td>
+            <td>
+                <input type="text" name="Username" placeholder="Enter Your Username" class="form-control" required="required"/>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Enter Password:
+                    </p>
+                </td>
+                <td>
+                    <input type="password" name="Password" placeholder="Enter Your Password" class="form-control" required="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit" class="btn btn-primary" style="color: #1b1e21">
+                </td>
+            </tr>
+        </table>
+        </form>
+        <?php
+            if(isset($_POST["Submit"]))
+            {
+                echo "<script>alert('Logged in')</script>";
+            }
+        ?>
+    </div>
+    <br>
+    <br>
 </div>
 </body>
