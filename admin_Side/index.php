@@ -69,8 +69,9 @@
 
     </div>
     <div class="container">
-        <h2><b>Login</b></h2>
-        <form action="" method>
+        <h2><center><b>Login</b></center></h2>
+        <br/>
+        <form action="" method="post">
         <table class="table">
             <tr>
             <td>
@@ -92,6 +93,7 @@
                     <input type="password" name="Password" placeholder="Enter Your Password" class="form-control" required="required"/>
                 </td>
             </tr>
+
             <tr>
                 <td>
                     <input type="submit" value="Submit" class="btn btn-primary" style="color: #1b1e21">
@@ -102,7 +104,9 @@
         <?php
             if(isset($_POST["Submit"]))
             {
-                echo "<script>alert('Logged in')</script>";
+                /*$a=5;
+                echo $a;*/
+                echo "<script>alert('Hello');</script>";
             }
         ?>
     </div>
