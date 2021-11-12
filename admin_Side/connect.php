@@ -1,3 +1,3 @@
 <?php
-    $link=mysqli_connect('localhost','root','Lebronbro5%','ecommerce');
+    $link=mysqli_connect('localhost:3308','root','','ecommerce');
 ?>

@@ -1,21 +1,4 @@
-<?php
-if(isset($_POST['Submit']))
-{
-    $link=mysqli_connect('localhost:3308','root',"",'ecommerce');
-    $name=$_POST['Username'];
-    $pass=$_POST['Password'];
-    $query='select * from admin';
-    $var=mysqli_query($link,$query);
-    $tuple=mysqli_fetch_array($var);
-    $u=$tuple['username'];
-    $p=$tuple['password'];
-    echo '<script>alert("Logged in")</script>';
-    if($name==$u && $pass==$p)
-    {
-        header("Location:ahome.php");
-    }
-}
-?>
+
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -33,6 +16,7 @@ if(isset($_POST['Submit']))
             background-color: black;
             margin: 6px 0;
         }
+
         .split {
             position: relative;
             width: 100%;
@@ -80,10 +64,10 @@ if(isset($_POST['Submit']))
                         </div>
                         <div class="collapse navbar-collapse" id="mystyle">
                             <ul class="nav navbar-nav">
-                                <li><a href="index.php" class="active"><font color="#2d2d2d">Home</font></a></li>
-                                <li><a href="#"><font color="#2d2d2d">About</font></a></li>
-                                <li><a href="#"><font color="#2d2d2d">Contact</font></a></li>
-                                <li><a href="#"><font color="#2d2d2d">Help</a></font></li>
+                                <li><a href="ahome.php" class="active"><font color="#2d2d2d">Home</font></a></li>
+                                <li><a href="prod.php"><font color="#2d2d2d">Products</font></a></li>
+                                <li><a href="sell.php"><font color="#2d2d2d">Sell</font></a></li>
+                                <li><a href="index.php"><font color="#2d2d2d">Logout</a></font></li>
                             </ul>
                             <div>
                     </nav>
@@ -94,38 +78,9 @@ if(isset($_POST['Submit']))
 
     </div>
     <div class="container">
-        <h2><center><b>Login</b></center></h2>
+        <h2><center><b>Logged in</b></center></h2>
         <br/>
-        <form action="index.php" method="post">
-        <table class="table">
-            <tr>
-            <td>
-                <p>
-                  Enter Username:
-                </p>
-            </td>
-            <td>
-                <input type="text" name="Username" placeholder="Enter Your Username" class="form-control" required="required"/>
-            </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
-                        Enter Password:
-                    </p>
-                </td>
-                <td>
-                    <input type="password" name="Password" placeholder="Enter Your Password" class="form-control" required="required"/>
-                </td>
-            </tr>
 
-            <tr>
-                <td>
-                    <input type="submit" value="Submit" name="Submit" class="btn btn-primary" style="color: #1b1e21">
-                </td>
-            </tr>
-        </table>
-        </form>
     </div>
     <br>
     <br>

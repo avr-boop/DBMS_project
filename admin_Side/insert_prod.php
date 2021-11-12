@@ -1,21 +1,4 @@
-<?php
-if(isset($_POST['Submit']))
-{
-    $link=mysqli_connect('localhost:3308','root',"",'ecommerce');
-    $name=$_POST['Username'];
-    $pass=$_POST['Password'];
-    $query='select * from admin';
-    $var=mysqli_query($link,$query);
-    $tuple=mysqli_fetch_array($var);
-    $u=$tuple['username'];
-    $p=$tuple['password'];
-    echo '<script>alert("Logged in")</script>';
-    if($name==$u && $pass==$p)
-    {
-        header("Location:ahome.php");
-    }
-}
-?>
+
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -80,10 +63,10 @@ if(isset($_POST['Submit']))
                         </div>
                         <div class="collapse navbar-collapse" id="mystyle">
                             <ul class="nav navbar-nav">
-                                <li><a href="index.php" class="active"><font color="#2d2d2d">Home</font></a></li>
-                                <li><a href="#"><font color="#2d2d2d">About</font></a></li>
-                                <li><a href="#"><font color="#2d2d2d">Contact</font></a></li>
-                                <li><a href="#"><font color="#2d2d2d">Help</a></font></li>
+                                <li><a href="ahome.php" class="active"><font color="#2d2d2d">Home</font></a></li>
+                                <li><a href="prod.php"><font color="#2d2d2d">Products</font></a></li>
+                                <li><a href="sell.php"><font color="#2d2d2d">Sell</font></a></li>
+                                <li><a href="index.php"><font color="#2d2d2d">Logout</a></font></li>
                             </ul>
                             <div>
                     </nav>
@@ -94,38 +77,90 @@ if(isset($_POST['Submit']))
 
     </div>
     <div class="container">
-        <h2><center><b>Login</b></center></h2>
+        <h2><center style="color: #212529;"><b>Insert Product Below:</b></center></h2>
         <br/>
-        <form action="index.php" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
         <table class="table">
             <tr>
-            <td>
-                <p>
-                  Enter Username:
-                </p>
-            </td>
-            <td>
-                <input type="text" name="Username" placeholder="Enter Your Username" class="form-control" required="required"/>
-            </td>
+                <td>
+                    Name
+                </td>
+                <td>
+                    <input type="text" name="Name" placeholder="Enter Product Name" class="form-control" required="required"/>
+                </td>
             </tr>
             <tr>
                 <td>
-                    <p>
-                        Enter Password:
-                    </p>
+                    Category
                 </td>
                 <td>
-                    <input type="password" name="Password" placeholder="Enter Your Password" class="form-control" required="required"/>
+                <select name="Category">
+                    <option>Mobile</option>
+                    <option>Laptop</option>
+                    <option>Camera</option>
+                    <option>TV</option>
+                </select>
                 </td>
             </tr>
-
             <tr>
                 <td>
-                    <input type="submit" value="Submit" name="Submit" class="btn btn-primary" style="color: #1b1e21">
+                    Brand
+                </td>
+                <td>
+                    <select name="Brand">
+                        <option>Dell</option>
+                        <option>Samsung</option>
+                        <option>Canon</option>
+                        <option>Hp</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Image
+                </td>
+                <td>
+                    <input type="file" name="Image"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Price
+                </td>
+                <td>
+                    <input type="text" name="Price" placeholder="Enter Price" class="form-control" required="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="Submit" value="Save" class="btn-outline-primary"/>
                 </td>
             </tr>
         </table>
         </form>
+        <?php
+            if(isset($_POST["Submit"]))
+            {
+                $link=mysqli_connect('localhost:3308','root',"",'ecommerce');
+                $name=$_POST['Name'];
+                $category=$_POST['Category'];
+                $brand=$_POST['Brand'];
+                $price=$_POST['Price'];
+                $image=$_FILES['Image']['name'];
+                $image_tap=$_FILES['Image']['tmp_name'];
+                $sql='insert into products(Name,Category,Brand,Price,Image) values("'.$name.'","'.$category.'","'.$brand.'","'.$price.'","'.$image.'");';
+                move_uploaded_file($image_tap,"c/$image");
+                //echo $name.'","'.$category.'","'.$brand.'","'.$price.'","'.$image;
+                if(mysqli_query($link,$sql,MYSQLI_USE_RESULT))
+                {
+                    echo "<script>alert('saved')</script>";
+                }
+                else
+                {
+                    echo "<script>alert('not saved')</script>";
+                }
+            }
+        ?>
     </div>
     <br>
     <br>

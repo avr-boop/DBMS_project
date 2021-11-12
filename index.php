@@ -1,3 +1,6 @@
+<?php
+    $link=mysqli_connect('localhost:3308','root','','ecommerce');
+?>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -9,7 +12,12 @@
     <meta http-equiv="Content-Type" content="text/html" charset="x-iso-8859-1">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
     <style>
-
+        .divclass {
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 6px 0;
+        }
         .split {
             position: relative;
             width: 100%;
@@ -48,7 +56,9 @@
                         <nav class="navbar ">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mystyle">
-                                    <span class="icon-bar">_</span>
+                                    <span class="icon-bar"><div class="divclass"></div>
+                                <div class="divclass"></div>
+                                <div class="divclass"></div></span>
                                     <!--<span class="icon-bar">--</span>
                                     <span class="icon-bar">--</span>-->
                                 </button>
@@ -99,64 +109,28 @@
                 </div>
             </div>
             <div class="col-sm-10=" style="white-space: nowrap;display: inline-block">
-
+                <?php
+                    //j
+                ?>
                 <div class="col-sm-4 " style="display: inline-block">
+                    <?php
+                        $q="select * from products limit 0,6";
+                        $run=mysqli_query($link,$q,MYSQLI_USE_RESULT);
+                        while ($row=mysqli_fetch_array($run))
+                        {
+                            $name=$row['Name'];
+                            $img=$row['Image'];
+                        }
+                    ?>
                     <center>
-                        <img src="img/canoncam.jfif" width="150px" height="150px">
+                        <?php echo"<img src='admin_Side/c/$img' width='150px' height='150px'>"; ?></center><br><br>
+                            <h3 align="center"><?php echo $name;?></h3>
+
                         <a href="b.php" class="split2"><p style="color: #1d2124">Buy Now</p></a>
                     </center>
 
                 </div>
-                <div class="col-sm-4" style="display: inline-block">
-                    <center>
-                        <img src="img/canoncam2.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2"><p style="color: #1d2124">Buy Now</p></a>
-                    </center>
-                </div>
-                <div class="col-sm-4" style="display: inline-block">
-                    <center>
-                        <img src="img/dell1.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
-                    </center>
-                </div>
-                <br/><br/>.
-                <div class="col-sm-4" style="display: inline-block">
-                    <center>
-                        <img src="img/canoncam.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
-                    </center>
-                </div>
-                <div class="col-sm-4" style="display: inline-block">
-                    <center>
-                        <img src="img/canoncam2.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
-                    </center>
-                </div>
-                <div class="col-sm-4" style="display: inline-block">
-                    <center>
-                        <img src="img/dell1.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
-                    </center>
-                </div>
-                <br/><br/>.
-                <div class="col-sm-4" style="display: inline-block">
-                    <center>
-                        <img src="img/canoncam.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
-                    </center>
-                </div>
-                <div class="col-sm-4" style="display: inline-block">
-                    <center>
-                        <img src="img/canoncam2.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2" ><p style="color: #1d2124">Buy Now</p></a>
-                    </center>
-                </div>
-                <div class="col-sm-4" style="display: inline-block">
-                    <center>
-                        <img src="img/dell1.jfif" width="150px" height="150px">
-                        <a href="b.php" class="split2"><p style="color: #1d2124">Buy Now</p></a>
-                    </center>
-                </div>
+
             </div>
         </div>
     </div>
