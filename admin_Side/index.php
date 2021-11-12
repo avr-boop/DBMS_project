@@ -1,3 +1,17 @@
+<?php
+if(isset($_POST['Submit']))
+{
+    $link=mysqli_connect('localhost:3308','root',"",'ecommerce');
+    $name=$_POST['Username'];
+    $pass=$_POST['Password'];
+    $query='select * from admin';
+    $var=mysqli_query($link,$query);
+    $tuple=mysqli_fetch_array($var);
+    $u=$tuple['username'];
+    //echo $u;
+    $p=$tuple['password'];
+}
+?>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -71,7 +85,7 @@
     <div class="container">
         <h2><center><b>Login</b></center></h2>
         <br/>
-        <form action="index.php" method="get">
+        <form action="index.php" method="post">
         <table class="table">
             <tr>
             <td>
@@ -96,26 +110,11 @@
 
             <tr>
                 <td>
-                    <input type="submit" value="Submit" class="btn btn-primary" style="color: #1b1e21">
+                    <input type="submit" value="Submit" name="Submit" class="btn btn-primary" style="color: #1b1e21">
                 </td>
             </tr>
         </table>
         </form>
-        <?php
-            if(isset($_GET["Submit"]))
-            {
-                /*$a=5;
-                echo $a;*/
-                $link=mysqli_connect('localhost','root','Lebronbro5%','ecommerce');
-                $username=$_GET['Username'];
-                $password=$_GET['Password'];
-                $query="select * from admin";
-                $var=mysqli_query($link,$query);
-                $tuple=mysqli_fetch_array($var);
-                echo $u=$tuple['Username'];
-                echo $p=tuple['Password'];
-            }
-        ?>
     </div>
     <br>
     <br>
