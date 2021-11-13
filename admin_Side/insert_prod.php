@@ -9,6 +9,7 @@
     </title>
     <meta http-equiv="Content-Type" content="text/html" charset="x-iso-8859-1">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+
     <style>
         .divclass {
             width: 35px;

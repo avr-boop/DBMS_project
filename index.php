@@ -12,6 +12,11 @@
     <meta http-equiv="Content-Type" content="text/html" charset="x-iso-8859-1">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
     <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-row-gap: 2em;
+        }
         .divclass {
             width: 35px;
             height: 5px;
@@ -108,27 +113,28 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-10=" style="white-space: nowrap;display: inline-block">
+            <div class="col-sm-10" style="white-space: nowrap;display: inline-block">
                 <?php
-                    //j
+                /*$q="select * from products limit 0,6";
+                $run=mysqli_query($link,$q,MYSQLI_USE_RESULT);
+                while ($row=mysqli_fetch_array($run))
+                {
+                    $name=$row['Name'];
+                    $img=$row['Image'];
+                }*/
                 ?>
-                <div class="col-sm-4 " style="display: inline-block">
-                    <?php
+                <div class="grid-container ">
+                        <?php
                         $q="select * from products limit 0,6";
                         $run=mysqli_query($link,$q,MYSQLI_USE_RESULT);
+
                         while ($row=mysqli_fetch_array($run))
                         {
                             $name=$row['Name'];
                             $img=$row['Image'];
+                            echo"<div class='container'><img src='admin_Side/c/$img' width='150px' height='150px'> <a href='b.php'><p class='btn-link'>Buy Now($name)</p></a></div>";
                         }
-                    ?>
-                    <center>
-                        <?php echo"<img src='admin_Side/c/$img' width='150px' height='150px'>"; ?></center><br><br>
-                            <h3 align="center"><?php echo $name;?></h3>
-
-                        <a href="b.php" class="split2"><p style="color: #1d2124">Buy Now</p></a>
-                    </center>
-
+                        ?>
                 </div>
 
             </div>
