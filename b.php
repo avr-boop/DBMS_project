@@ -1,6 +1,4 @@
-<?php
-    $link=mysqli_connect('localhost:3308','root','','ecommerce');
-?>
+
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -123,23 +121,86 @@
                     $img=$row['Image'];
                 }*/
                 ?>
-                <div class="grid-container ">
-                        <?php
-                        $q="select * from products limit 0,8";
-                        $run=mysqli_query($link,$q,MYSQLI_USE_RESULT);
-
-                        while ($row=mysqli_fetch_array($run))
-                        {
-                            $name=$row['Name'];
-                            $img=$row['Image'];
-                            $brand=$row['Brand'];
-                            $price=$row['Price'];
-                            $model_name = $brand.' ' .$name.'!'.$price;
-                            echo"<div class='container' style=' display: flex; flex-direction: column;'><img src='admin_Side/c/$img' width='150px' height='150px' style='margin-bottom: 1em'> <form action='b.php' method='get'><button name='desc' value='$model_name'>Buy Now</button></form></div>";
-                        }
-                        ?>
+                <div class="col-sm-4">
+                        <h3 align="center">
+                            Enter your details
+                        </h3>
                 </div>
+                <form action="" method="post">
+                    <table>
+                        <tr>
+                            <td>
+                                Enter Name:
+                            </td>
+                            <td>
+                                <input type="text" name="Name" placeholder="Enter your name" class="form-control" required="required">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Enter Address:
+                            </td>
+                            <td>
+                                <input type="text" name="Address" placeholder="Enter your address" class="form-control" required="required">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Enter City:
+                            </td>
+                            <td>
+                                <input type="text" name="City" placeholder="Enter your city" class="form-control" required="required">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Enter State:
+                            </td>
+                            <td>
+                                <input type="text" name="State" placeholder="Enter your State" class="form-control" required="required">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Enter Mobile Number:
+                            </td>
+                            <td>
+                                <input type="text" name="Mobileno" placeholder="Enter Mobile Number" class="form-control" required="required">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" name="Book" value="Place-Order" class="btn-outline-primary"/>
+                            </td>
+                        </tr>
+                        <?php
+                            $link=mysqli_connect('localhost:3308','root','','ecommerce');
+                            if(isset($_POST['Book']))
+                            {
+                                $name=$_POST['Name'];
+                                $city=$_POST['City'];
+                                $state=$_POST['State'];
+                                $address=$_POST['Address'];
+                                $mobile=$_POST['Mobileno'];
+                                $var=$_GET['desc'];
+                                $pieces=explode("!",$var);
+                                $modelname=$pieces[0];
+                                $price=$pieces[1];
+                                //echo $var;
+                                $sql="insert into sell(Name,Address,City,State,Mobile,Model,Price) value ('$name','$address','$city','$state','$mobile','$modelname',$price);";
+                                if(mysqli_query($link,$sql,MYSQLI_USE_RESULT))
+                                {
+                                    echo "<script>alert('Successfully placed')</script>";
+                                }
+                                else
+                                {
+                                    echo "<script>alert('Order not placed!')</script>";
+                                }
+                            }
 
+                        ?>
+                    </table>
+                </form>
             </div>
         </div>
     </div>

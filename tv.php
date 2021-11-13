@@ -125,17 +125,17 @@
                 ?>
                 <div class="grid-container ">
                         <?php
-                        $q="select * from products limit 0,8";
+                        $d2="Dell";
+                        $q='select * from products where Category="TV";';
                         $run=mysqli_query($link,$q,MYSQLI_USE_RESULT);
 
-                        while ($row=mysqli_fetch_array($run))
-                        {
-                            $name=$row['Name'];
-                            $img=$row['Image'];
-                            $brand=$row['Brand'];
+                        while ($row=mysqli_fetch_array($run)) {
+                            $name = $row['Name'];
+                            $img = $row['Image'];
+                            $brand = $row['Brand'];
                             $price=$row['Price'];
                             $model_name = $brand.' ' .$name.'!'.$price;
-                            echo"<div class='container' style=' display: flex; flex-direction: column;'><img src='admin_Side/c/$img' width='150px' height='150px' style='margin-bottom: 1em'> <form action='b.php' method='get'><button name='desc' value='$model_name'>Buy Now</button></form></div>";
+                            echo "<div class='container' style=' display: flex; flex-direction: column;'><img src='admin_Side/c/$img' width='150px' height='150px' style='margin-bottom: 1em'> <form action='b.php' method='get'><button name='desc' value='$model_name'>Buy Now</button></form></div>";
                         }
                         ?>
                 </div>

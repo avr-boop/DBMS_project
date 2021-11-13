@@ -125,7 +125,8 @@
                 ?>
                 <div class="grid-container ">
                         <?php
-                        $q="select * from products limit 0,8";
+                        $d2="Dell";
+                        $q='select * from products where Brand="Dell";';
                         $run=mysqli_query($link,$q,MYSQLI_USE_RESULT);
 
                         while ($row=mysqli_fetch_array($run))

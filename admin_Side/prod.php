@@ -47,7 +47,7 @@
             <p style="text-align: end; color: #e2e3e5">Contact for queries</p>
         </div>
     </div>
-    <div class="container"><h1 align="center"><font face="Lucida Handwriting">Tech Shopin mart</font></font></h1></div>
+    <div class="container"><h1 align="center"><font face="Times New Roman">Tech Shopin mart</font></font></h1></div>
     <div class="container">
         <div class="container" style="background: linear-gradient(100deg,bisque,#7abaff); color: white;">
             <div class="row">
@@ -80,7 +80,6 @@
     <div class="container">
         <h2><center style="color: #212529;"><b>Product</b></center></h2>
         <center><a href="insert_prod.php"><p style="color: #121416;">Insert Product</p></a></center>
-        <center><a href="insert_prod.php"><p style="color: #121416;">Insert List</p></a></center>
         <br/>
 
     </div>
