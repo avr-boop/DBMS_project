@@ -90,29 +90,98 @@
                 <td>State</td>
                 <td></td>
             </tr>
-            <?php
-                $sql="select * from sell";
-                $link=mysqli_connect('localhost:3308','root','','ecommerce');
-                $run=mysqli_query($link,$sql,MYSQLI_USE_RESULT);
-                while ($row=mysqli_fetch_array($run))
-                {
-                    $name=$row['Name'];
-                    $address=$row['Address'];
-                    $city=$row['City'];
-                    $state=$row['State'];
-                    $mobile=$row['Mobile'];
-                    $model=$row['Model'];
-                    $price=$row['Price'];
-                }
-            ?>
             <tr>
-                <td><?php echo $mobile;?></td>
-                <td><?php echo $model;?></td>
-                <td><?php echo $price;?></td>
-                <td><?php echo $name;?></td>
-                <td><?php echo $address;?></td>
-                <td><?php echo $city;?></td>
-                <td><?php echo $state;?></td>
+                <td>
+                    <?php
+                        $sql2="select * from sell";
+                        $link2=mysqli_connect('localhost:3308','root','','ecommerce');
+                        $run2=mysqli_query($link2,$sql2,MYSQLI_USE_RESULT);
+                        while($row2=mysqli_fetch_array($run2))
+                        {
+                            $mobile=$row2['Mobile'];
+                            echo $mobile;
+                            echo "<br/>";
+                        }
+                        ?>
+                </td>
+                <td>
+                    <?php
+                    $sql2="select * from sell";
+                    $link2=mysqli_connect('localhost:3308','root','','ecommerce');
+                    $run2=mysqli_query($link2,$sql2,MYSQLI_USE_RESULT);
+                    while($row2=mysqli_fetch_array($run2))
+                    {
+                        $model=$row2['Model'];
+                        echo $model;
+                        echo "<br/>";
+                    }
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    $sql2="select * from sell";
+                    $link2=mysqli_connect('localhost:3308','root','','ecommerce');
+                    $run2=mysqli_query($link2,$sql2,MYSQLI_USE_RESULT);
+                    while($row2=mysqli_fetch_array($run2))
+                    {
+                        $price=$row2['Price'];
+                        echo $price;
+                        echo "<br/>";
+                    }
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    $sql2="select * from sell";
+                    $link2=mysqli_connect('localhost:3308','root','','ecommerce');
+                    $run2=mysqli_query($link2,$sql2,MYSQLI_USE_RESULT);
+                    while($row2=mysqli_fetch_array($run2))
+                    {
+                        $name=$row2['Name'];
+                        echo $name;
+                        echo "<br/>";
+                    }
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    $sql2="select * from sell";
+                    $link2=mysqli_connect('localhost:3308','root','','ecommerce');
+                    $run2=mysqli_query($link2,$sql2,MYSQLI_USE_RESULT);
+                    while($row2=mysqli_fetch_array($run2))
+                    {
+                        $address=$row2['Address'];
+                        echo $address;
+                        echo "<br/>";
+                    }
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    $sql2="select * from sell";
+                    $link2=mysqli_connect('localhost:3308','root','','ecommerce');
+                    $run2=mysqli_query($link2,$sql2,MYSQLI_USE_RESULT);
+                    while($row2=mysqli_fetch_array($run2))
+                    {
+                        $city=$row2['City'];
+                        echo $city;
+                        echo "<br/>";
+                    }
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    $sql2="select * from sell";
+                    $link2=mysqli_connect('localhost:3308','root','','ecommerce');
+                    $run2=mysqli_query($link2,$sql2,MYSQLI_USE_RESULT);
+                    while($row2=mysqli_fetch_array($run2))
+                    {
+                        $state=$row2['State'];
+                        echo $state;
+                        echo "<br/>";
+                    }
+                    ?>
+                </td>
 
             </tr>
         </table>

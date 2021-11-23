@@ -69,9 +69,7 @@
                             <div class="collapse navbar-collapse" id="mystyle">
                                 <ul class="nav navbar-nav">
                                     <li><a href="index.php" class="active"><font color="#2d2d2d">Home</font></a></li>
-                                    <li><a href="#"><font color="#2d2d2d">About</font></a></li>
-                                    <li><a href="#"><font color="#2d2d2d">Contact</font></a></li>
-                                    <li><a href="#"><font color="#2d2d2d">Help</a></font></li>
+                                    <li><a href="contact.php"><font color="#2d2d2d">Contact</font></a></li>
                                 </ul>
                                 <div>
                         </nav>
